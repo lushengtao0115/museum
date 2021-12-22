@@ -6,7 +6,8 @@ import './assets/css/global.css'
 import './plugins/element.js'
 // 导入路由
 import router from './router'
-
+// import less from 'less'
+// Vue.use(less)
 Vue.config.productionTip = false
 
 new Vue({
