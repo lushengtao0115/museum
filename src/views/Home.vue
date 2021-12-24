@@ -45,7 +45,8 @@ export default {
 .Home{
   width:100%;
   height:100%;
-  background-image: url('../assets/image/bg／two.png');
+  /* background-image: url('../assets/image/bg／two.png'); */
+  background-color: #FAFBFF;
   background-size: 100% 100%;
 }
 .el-container{

@@ -6,9 +6,13 @@ import './assets/css/global.css'
 import './plugins/element.js'
 // 导入路由
 import router from './router'
-// import less from 'less'
-// Vue.use(less)
+// 导入echarts插件
+// import echarts from 'echarts'
+import * as echarts from 'echarts'
+
 Vue.config.productionTip = false
+
+Vue.prototype.$echarts = echarts
 
 new Vue({
   router,
