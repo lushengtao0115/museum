@@ -1,4 +1,4 @@
-<!-- 首页 -->
+<!-- 副页 -->
 <template>
 	<div class="main">
 		<!--主体内容部分-->
@@ -67,25 +67,6 @@
 					<el-menu-item index='/searchgoods/searchgoodschildren2'>
 						<span>铜铁表面白亮处理-温湿度126</span>
 					</el-menu-item>
-<!-- 					<el-menu-item index="1-2-1">
-						<template>
-						<span>2021生肖展</span>  
-						</template>
-					</el-menu-item> -->
-<!-- 					<el-submenu index="1-2-2">
-						<template slot="title">
-							<span>2021高山景行</span>
-						</template>
-						<el-menu-item index="/searchgoods/searchgoodschildren1">
-							<span>柜36-344</span>
-						</el-menu-item>
-						<el-menu-item index='/searchgoods/searchgoodschildren'>
-							<span>青铜宝剑</span>
-						</el-menu-item>
-						<el-menu-item index='/searchgoods/searchgoodschildren2'>
-							<span>青铜鼎</span>
-						</el-menu-item>
-					</el-submenu> -->
 					</el-submenu>
 				</el-submenu>
 				<!--2.一级菜单-->
@@ -562,7 +543,7 @@ export default {
 .left{
 	width: 426px;
 	height: 940px;
-	margin-left: 24px;
+	margin-left: 24px; 
 	margin-right: 40px;
 	margin-bottom: 24px;
 	background-image: url('../assets/image/bg／san.png');
