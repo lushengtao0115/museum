@@ -142,15 +142,14 @@
 			</el-menu>
 			</div>
 		</div>
+		
 		<div class="mid">
 			<div class="mid1">
 				<!--风险统计-->
 				<div class="mid1_title">
 					风险统计
 				</div>
-				<!--文字 这个地方需要查询资料，即如何嵌入元素，设置偏移？？-->
-				<!-- <div>测试++++++++++++++++</div> -->
-				<!--柱状图-->
+				<!-- <div style="position: absolute;top: 540px;left: 960px;">测试</div> -->
 				<div id="mid1_bar" style="height: 400px;"></div>
 			</div>
 			<div class="mid2">
@@ -207,7 +206,7 @@
 				<div class="right2_title">
 					文物占比
 				</div>
-				<div id="mid2_bar" style="height: 402px;"></div>
+				<div id="mid2_bar" style="height: 402px; width: 100%;"></div>
 			</div>
 		</div>
 	</div>
@@ -442,6 +441,11 @@ export default {
 		]
 		}
 		myChart.setOption(option)
+		// ？？？这个地方需要清楚渲染机制
+		myChart.resize({
+			height: 400,
+			width: 657
+		})
 	},
 	initialBar2 () {
 	const myChart = this.$echarts.init(document.getElementById('mid2_bar'))
@@ -539,6 +543,7 @@ export default {
 .main{
 	display: flex;
 	flex-direction: row;	
+	overflow: auto;
 }
 .left{
 	width: 426px;
@@ -626,8 +631,9 @@ export default {
 }
 .mid1_title{
 	height: 33px;
-	display: flex;
-	justify-content: center;
+	/* display: flex;
+	justify-content: center; */
+	text-align: center;
 	font-size: 24px;
 	font-weight: 500;
 	font-family: MicrosoftYaHei;
@@ -660,6 +666,48 @@ export default {
 	padding-right: 24px;
 	padding-bottom: 42px;
 	padding-left: 23px;
+}
+/* el-table样式修改
+ 参考链接：https://www.cnblogs.com/reround/p/12745090.html
+*/
+/* 修改头部样式 */
+/deep/.el-table .el-table__header-wrapper tr th{
+  background-color: #6576BD !important; /* 背景颜色*/
+  font-size: 18px;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  color: #FFFFFF;
+  line-height: 25px;
+}
+/deep/.el-table .el-table__header-wrapper{
+  border-radius: 10px; /* 圆角*/
+}
+/* 修改每行样式 */
+/deep/.el-table .el-table__row{
+  background-color: #E9EEFF;
+  font-size: 18px;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  color: #333333;
+  line-height: 25px;
+}
+/deep/.el-table--striped .el-table__body tr.el-table__row--striped td.el-table__cell {
+	background-color: #D8E1FF;
+	font-size: 18px;
+	font-family: PingFangSC-Regular, PingFang SC;
+	font-weight: 400;
+	color: #333333;
+	line-height: 25px;
+}
+/* 去掉滚动轴 */
+/deep/.el-table--scrollable-y ::-webkit-scrollbar {
+  /* display: none; */
+  width: 15px;
+  height: 10px;
+}
+/deep/.el-table--scrollable-y ::-webkit-scrollbar-thumb {
+	background-color: #E9EEFF;
+	border-radius: 5px;
 }
 .right{
 	width: 657px;

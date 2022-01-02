@@ -1,21 +1,49 @@
 <template>
     <div class='Home'>
-        <el-container>
-			<!-- 这里是每个页面共同的头 -->
-            <el-header>
-				<!-- 首页 实时监测 数据分析 数据统计 系统管理 -->
-				<div class="HomeNav">
-					<div class="Nav1">首页</div>
-					<div class="Nav2">实时监测</div>
-					<div class="Nav3">数据分析</div>
-					<div class="Nav4">上海博物馆监控平台</div>
-					<div class="Nav5">数据统计</div>
-					<div class="Nav6">系统管理</div>
+		<el-container>
+		<el-header>
+			<div class="HomeNav">
+			<div class="NavLeft">
+				<div class='NavLeftMenu'>
+				<el-menu class="homeMenuNav" mode="horizontal" router
+						:default-active="activePath">
+					<el-menu-item index="/homemain" @click="saveNavState('/homemain')">
+					<img src="../assets/image/icon／home_slt.png" alt="">&thinsp;
+					首页
+					</el-menu-item>
+					<el-menu-item index="/searchgoods" @click="saveNavState('/searchgoods')">
+					<img src="../assets/image/icon／rtm_nts.png" alt="">&thinsp;
+					实时监测
+					</el-menu-item>
+					<el-menu-item index="/dataanalysis" @click="saveNavState('/dataanalysis')">
+					<img src="../assets/image/icon／da_nts.png" alt="">&ensp;
+					数据分析
+					</el-menu-item>
+				</el-menu>
 				</div>
-            </el-header>
-            <!--下面是各个不同的页面-->
-			<router-view></router-view>
-        </el-container>
+			</div>
+			<div class="NavMid">
+				<span class="info1">上海博物馆监控平台</span>
+			</div>
+			<div class="NavRight">
+				<div class='NavRightMenu'>
+				<el-menu class="homeMenuNav" mode="horizontal" router
+						:default-active="activePath">
+					<el-menu-item index="/systemmanagement" @click="saveNavState('/homemain')">
+					<img src="../assets/image/icon／home_slt.png" alt="">&thinsp;
+					系统管理
+					</el-menu-item>
+					<el-menu-item index="/statistics " @click="saveNavState('/searchgoods')">
+					<img src="../assets/image/icon／rtm_nts.png" alt="">&thinsp;
+					数据统计
+					</el-menu-item>
+				</el-menu>
+				</div>
+			</div>
+			</div>
+		</el-header>
+		<router-view></router-view>
+		</el-container>
     </div>
 </template>
 
@@ -46,7 +74,7 @@ export default {
   width:100%;
   height:100%;
   /* background-image: url('../assets/image/bg／two.png'); */
-  background-color: #FAFBFF;
+  background-color: #F2F5FF;
   background-size: 100% 100%;
 }
 .el-container{
@@ -63,5 +91,81 @@ export default {
 	width: 100%;
 	display: flex;
 	justify-content: space-between;
+}
+/* fjd添加 */
+.NavLeft {
+  width: 600px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.NavLeftMenu {
+  width: 600px;
+  height: 92px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.el-menu {
+  background-color: #f2f5ff;
+  border: none;
+}
+
+.el-menu-item {
+  font: bold 24px "Microsoft YaHei";
+  /* font-size: 1.25rem; */
+  line-height: 1.625rem !important;
+  width: 190px;
+  height: 44px !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 10px !important;
+  margin-top: 16px !important;
+  color: #6778BF !important;
+  padding: 20px 16px;
+  background-color: #F2F5FF;
+}
+
+.el-menu-item.is-active {
+  background-color: #F2F5FF;
+}
+
+.NavMid {
+  margin-left: 0px;
+}
+
+.info1 {
+  z-index: 4;
+  width: 360px;
+  height: 56px;
+  display: block;
+  overflow-wrap: break-word;
+  color: rgba(51, 47, 108, 1);
+  font-size: 40px;
+  font-family: PingFangSC-Semibold;
+  white-space: nowrap;
+  line-height: 56px;
+  text-align: center;
+  margin: 18px 0 0 0px;
+}
+
+.NavRight {
+  width: 600px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.NavRightMenu {
+  width: 600px;
+  height: 92px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.NavRightMenu el-menu-item {
+  margin: 0 40px;
 }
 </style>
