@@ -9,10 +9,11 @@ import router from './router'
 // 导入echarts插件
 // import echarts from 'echarts'
 import * as echarts from 'echarts'
+import Axios from 'axios'
 
 Vue.config.productionTip = false
-
 Vue.prototype.$echarts = echarts
+Vue.prototype.$http = Axios
 
 new Vue({
   router,

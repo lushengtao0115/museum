@@ -661,54 +661,7 @@ export default {
 	padding-top: 24px; /* 注意padding和margin的区别*/
 	color: #332F6C;	
 }
-#mid2_table{
-	padding-top: 24px;
-	padding-right: 24px;
-	padding-bottom: 42px;
-	padding-left: 23px;
-}
-/* el-table样式修改
- 参考链接：https://www.cnblogs.com/reround/p/12745090.html
-*/
-/* 修改头部样式 */
-/deep/.el-table .el-table__header-wrapper tr th{
-  background-color: #6576BD !important; /* 背景颜色*/
-  font-size: 18px;
-  font-family: PingFangSC-Regular, PingFang SC;
-  font-weight: 400;
-  color: #FFFFFF;
-  line-height: 25px;
-}
-/deep/.el-table .el-table__header-wrapper{
-  border-radius: 10px; /* 圆角*/
-}
-/* 修改每行样式 */
-/deep/.el-table .el-table__row{
-  background-color: #E9EEFF;
-  font-size: 18px;
-  font-family: PingFangSC-Regular, PingFang SC;
-  font-weight: 400;
-  color: #333333;
-  line-height: 25px;
-}
-/deep/.el-table--striped .el-table__body tr.el-table__row--striped td.el-table__cell {
-	background-color: #D8E1FF;
-	font-size: 18px;
-	font-family: PingFangSC-Regular, PingFang SC;
-	font-weight: 400;
-	color: #333333;
-	line-height: 25px;
-}
-/* 去掉滚动轴 */
-/deep/.el-table--scrollable-y ::-webkit-scrollbar {
-  /* display: none; */
-  width: 15px;
-  height: 10px;
-}
-/deep/.el-table--scrollable-y ::-webkit-scrollbar-thumb {
-	background-color: #E9EEFF;
-	border-radius: 5px;
-}
+
 .right{
 	width: 657px;
 	height: 940px;
